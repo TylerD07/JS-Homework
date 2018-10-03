@@ -6,9 +6,19 @@ const renderList = function () {
     }
 };
 
-const add = function(){
+const add = function () {
+    $("button").on("click", function () {
+        let newEmployee = {
+            name: document.getElementById("nameInput").value,
+            room: document.getElementById("roomInput").value,
+            number: document.getElementById("numInput").value,
+        }
+        employeeList.push(newEmployee);
+        renderList();
     
-}
+    });
+
+};
 
 //Executions
 
@@ -16,4 +26,9 @@ $("#view").on("click", function () {
     $("#visiblePage").empty();
     renderList();
 });
+
+add();
+
+
+
 
