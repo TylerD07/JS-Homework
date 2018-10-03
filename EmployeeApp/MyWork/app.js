@@ -10,10 +10,11 @@ const add = function () {
     $("button").on("click", function () {
         let newEmployee = {
             name: document.getElementById("nameInput").value,
-            room: document.getElementById("roomInput").value,
-            number: document.getElementById("numInput").value,
+            officeNum: document.getElementById("roomInput").value,
+            phoneNum: document.getElementById("numInput").value,
         }
         employeeList.push(newEmployee);
+        console.log(newEmployee)
         renderList();
     
     });
@@ -24,15 +25,19 @@ const add = function () {
 
 $("#view").on("click", function () {
     $("#visiblePage").empty();
+    $("#inputBarID").addClass("inputBar");
+
+    // $(".inputBar").toggleClass( "inputBar", false );
+
     renderList();
 });
-
-add();
 
 $("#add").on("click", function(){
     $("#visiblePage").empty();
     $(".inputBar").toggleClass( "inputBar", false );
 })
+
+add();
 
 
 
