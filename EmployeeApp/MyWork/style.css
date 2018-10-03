@@ -4,6 +4,7 @@ header{
     display: inline;
     overflow: auto;
     
+    
 }
 
  h3{
@@ -12,10 +13,14 @@ header{
     margin-left: 15%;
     text-decoration: underline;
     text-decoration-color:black;
+    font-family: 'Playfair Display SC', serif;
     
     
 }
 
+.inputBar{
+    display: none;
+}
 
 .userForm{
     float: right;
@@ -23,6 +28,7 @@ header{
     position: relative;
     bottom: 22px;
     margin-right: 10px;
+    font-family: 'Playfair Display SC', serif;
     
     
     
@@ -38,6 +44,7 @@ header{
     background-color: #111; 
     overflow-x: hidden; 
     padding-top: 20px;
+    font-family: 'Playfair Display SC', serif;
 }
 
 
@@ -70,7 +77,9 @@ background-color: gold;
     margin-left: 20%;
 }
 
-
+.container{
+    font-family: 'Kaushan Script', cursive;
+}
 
 
 

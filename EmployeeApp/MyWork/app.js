@@ -29,6 +29,10 @@ $("#view").on("click", function () {
 
 add();
 
+$("#add").on("click", function(){
+    $("#visiblePage").empty();
+    $(".inputBar").toggleClass( "inputBar", false );
+})
 
 
 
