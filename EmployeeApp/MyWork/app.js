@@ -1,18 +1,19 @@
-$("#view").on("click", function () {
+//Functions
+
+const renderList = function () {
     for (let i = 0; i < employeeList.length; i++) {
-        $("#viewPage").hmtl(`<div class="employeeId"><p>${employeeList[i].name}</p><p>${employeeList[i].officeNum}</p><p>${employeeList[i].phoneNum}</p></div>`)
+        $("#visiblePage").append(`<div class="employeeId"><p>${employeeList[i].name}</p><p>${employeeList[i].officeNum}</p><p>${employeeList[i].phoneNum}</p></div>`)
     }
+};
+
+const add = function(){
+    
+}
+
+//Executions
+
+$("#view").on("click", function () {
+    $("#visiblePage").empty();
+    renderList();
 });
 
-
-
-
-// const showList = function () {
-//     $(‘#viewPage’).empty;
-//     for (let i = 0; i < employeeList.length; i++) {
-//         $(“#viewPage”).append(`<div class="employeeId"><p>${employeeList[i].name}</p><p>${employeeList[i].officeNum}</p><p>${employeeList[i].phoneNum}</p></div>`)
-//     }
-// })
-//     showList();
-
-// $(“#view”).on(‘click’, showList)
