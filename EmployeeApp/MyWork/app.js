@@ -25,20 +25,69 @@ const verify = function () {
     $("#verifyButton").on("click", function () {
         $("#visiblePage").empty();
         let employeeName = document.getElementById("nameInput2").value;
+        let checker = false
         for (let i = 0; i < employeeList.length; i++) {
-            if(employeeName == employeeList[i].name){
-                $("#visiblePage").append('<p class= "confirm"> Yes, this employee is in the system.</p>');
+            if (employeeName == employeeList[i].name) {
+                checker = true
             }
-            else{
-                $("#visiblePage").append("<p class ='invalid> Employee name is not valid.</p>");
-            } // fix else statement
-            
+
+        }
+
+        if (checker) {
+            $("#visiblePage").append('<p class= "confirm"> Yes, this employee is in the system.</p>');
+        }
+        else {
+            $("#visiblePage").append("<p class ='invalid'> Employee name is not valid.</p>");
         }
     })
+
 };
 
-const update = function(){
+const update = function () {
+    $(".updateButton").on("click", function () {
+        $("#visiblePage").empty();
 
+        let employeeName = document.getElementById("updateName").value;
+        let checker = false;
+        for (let i = 0; i < employeeList.length; i++) {
+            if (employeeName == employeeList[i].name) {
+                employeeList[i].officeNum = document.getElementById("updateRoom").value;
+                employeeList[i].phoneNum = document.getElementById("updateNum").value;
+                checker = true;
+
+            }
+
+        }
+
+        if (!checker) {
+            let newEmployee = {
+                name: document.getElementById("updateName").value,
+                officeNum: document.getElementById("updateRoom").value,
+                phoneNum: document.getElementById("updateNum").value,
+            }
+            employeeList.push(newEmployee);
+
+
+        }
+        renderList();
+    });
+
+};
+
+const remove = function () {
+    $("#removeButton").on("click", function () {
+        $("#visiblePage").empty();
+
+        let employeeName = document.getElementById("removeName").value;
+        let checker = false;
+        for (let i = 0; i < employeeList.length; i++) {
+            if (employeeName == employeeList[i].name) {
+                employeeList.splice(i);
+
+            }
+        };
+        renderList();
+    });
 };
 
 //Executions
@@ -74,7 +123,7 @@ $("#verify").on("click", function () {
 
 verify();
 
-$("#update").on("click", function() {
+$("#update").on("click", function () {
     $("#visiblePage").empty();
     $("#select").addClass("hideForm");
     $("#inputBarID").addClass("inputBar");
@@ -82,5 +131,14 @@ $("#update").on("click", function() {
 
 });
 
+update();
 
+$("#delete").on("click", function(){
+    $("#visiblePage").empty();
+    $("#select").addClass("hideForm");
+    $("#inputBarID").addClass("inputBar");
+    $(".updateInput").addClass("showTextbox"); 
     
+});
+
+remove();
