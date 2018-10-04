@@ -93,6 +93,31 @@ background-color: gold;
     font-family: 'Kaushan Script', cursive;
 }
 
+.updateInput{
+    float: right;
+    display: inline-flex;
+    position: relative;
+    bottom: 22px;
+    margin-left: 20px;
+    font-family: 'Playfair Display SC', serif;
+    
+}
+
+.showTextbox{
+    display:none;
+}
+p {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    margin-left: 40%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 65%;
+    margin-left: 0;
+}
 
 
 @media screen and (max-height: 450px) {
