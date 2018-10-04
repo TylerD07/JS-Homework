@@ -30,9 +30,20 @@ header{
     bottom: 22px;
     margin-right: 10px;
     font-family: 'Playfair Display SC', serif;
-    
-    
-    
+}
+
+#verifyForm{
+    float: right;
+    display: inline-flex;
+    position: relative;
+    bottom: 22px;
+    margin-right: 10px;
+    font-family: 'Playfair Display SC', serif;
+
+}
+
+.hideForm{
+    display:none;
 }
 
 .sidenav {

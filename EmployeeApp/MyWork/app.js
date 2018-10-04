@@ -7,7 +7,7 @@ const renderList = function () {
 };
 
 const add = function () {
-    $("button").on("click", function () {
+    $(".submit").on("click", function () {
         let newEmployee = {
             name: document.getElementById("nameInput").value,
             officeNum: document.getElementById("roomInput").value,
@@ -16,15 +16,24 @@ const add = function () {
         employeeList.push(newEmployee);
         console.log(newEmployee)
         renderList();
-    
+
     });
 
 };
+
+// const verify = function () {
+//     $("#verifyButton").on("click", function () {
+//         let employeeName = $("#nameInput2").value;
+//         console.log("employeeName");
+//     })
+// };
+
 
 //Executions
 
 $("#view").on("click", function () {
     $("#visiblePage").empty();
+    $("#select").addClass("hideForm");
     $("#inputBarID").addClass("inputBar");
 
     // $(".inputBar").toggleClass( "inputBar", false );
@@ -32,12 +41,20 @@ $("#view").on("click", function () {
     renderList();
 });
 
-$("#add").on("click", function(){
+$("#add").on("click", function () {
     $("#visiblePage").empty();
-    $(".inputBar").toggleClass( "inputBar", false );
+    $("#select").addClass("hideForm");
+    $(".inputBar").toggleClass("inputBar", false);
 })
 
 add();
 
+$("#verify").on("click", function () {
+    $("#visiblePage").empty();
+    $("#inputBarID").addClass("inputBar");
+    $("#select").removeClass("hideForm");
+
+})
 
 
+// verify();
