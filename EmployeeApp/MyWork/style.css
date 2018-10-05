@@ -119,13 +119,19 @@ p {
     margin-left: 0;
 }
 
-#removeForm{
-    margin-left: 20%;
+#remove{
+    float: right;
+    display: inline-flex;
+    position: relative;
+    bottom: 22px;
+    margin-left: 20px;
+    font-family: 'Playfair Display SC', serif;
 }
 
 .hideRemove{
     display: none;
 }
+
 
 
 @media screen and (max-height: 450px) {

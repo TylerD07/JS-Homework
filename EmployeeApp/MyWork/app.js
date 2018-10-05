@@ -77,15 +77,15 @@ const update = function () {
 const remove = function () {
     $("#removeButton").on("click", function () {
         $("#visiblePage").empty();
-
+        console.log("test");
         let employeeName = document.getElementById("removeName").value;
-        let checker = false;
         for (let i = 0; i < employeeList.length; i++) {
             if (employeeName == employeeList[i].name) {
-                employeeList.splice(i);
+               
+                employeeList.splice(i,1);
 
             }
-        };
+        }
         renderList();
     });
 };
@@ -96,6 +96,7 @@ $("#view").on("click", function () {
     $("#visiblePage").empty();
     $("#select").addClass("hideForm");
     $(".updateInput").addClass("showTextbox");
+    $("#removeForm").addClass("hideRemove");
     $("#inputBarID").addClass("inputBar");
 
 
@@ -107,6 +108,7 @@ $("#add").on("click", function () {
     $("#visiblePage").empty();
     $("#select").addClass("hideForm");
     $(".updateInput").addClass("showTextbox");
+    $("#removeForm").addClass("hideRemove");
     $(".inputBar").toggleClass("inputBar", false);
 })
 
@@ -116,6 +118,7 @@ $("#verify").on("click", function () {
     $("#visiblePage").empty();
     $("#inputBarID").addClass("inputBar");
     $(".updateInput").addClass("showTextbox");
+    $("#removeForm").addClass("hideRemove");
     $("#select").removeClass("hideForm");
 
 })
@@ -127,18 +130,19 @@ $("#update").on("click", function () {
     $("#visiblePage").empty();
     $("#select").addClass("hideForm");
     $("#inputBarID").addClass("inputBar");
+    $("#removeForm").addClass("hideRemove");
     $(".updateInput").removeClass("showTextbox");
 
 });
 
 update();
 
-$("#delete").on("click", function(){
+$("#delete").on("click", function () {
     $("#visiblePage").empty();
     $("#select").addClass("hideForm");
     $("#inputBarID").addClass("inputBar");
-    $(".updateInput").addClass("showTextbox"); 
-    
+    $(".updateInput").addClass("showTextbox");
+    $("#removeForm").removeClass("hideRemove");
 });
 
 remove();
