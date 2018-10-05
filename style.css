@@ -1,0 +1,140 @@
+
+
+header{
+    display: inline;
+    overflow: auto;
+    
+    
+}
+
+ h3{
+    line-height: 15px;
+    margin-top: 1%;
+    margin-left: 15%;
+    text-decoration: underline;
+    text-decoration-color:black;
+    font-family: 'Playfair Display SC', serif;
+    
+    
+}
+
+.inputBar{
+    display: none;
+}
+
+
+.userForm{
+    float: right;
+    display: inline-flex;
+    position: relative;
+    bottom: 22px;
+    margin-right: 10px;
+    font-family: 'Playfair Display SC', serif;
+}
+
+#verifyForm{
+    float: right;
+    display: inline-flex;
+    position: relative;
+    bottom: 22px;
+    margin-right: 10px;
+    font-family: 'Playfair Display SC', serif;
+
+}
+
+.hideForm{
+    display:none;
+}
+
+.sidenav {
+    height: 100%; 
+    width: 160px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+    font-family: 'Playfair Display SC', serif;
+}
+
+
+.sidenav a {
+    padding: 10px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: gold;
+    display: block;
+}
+
+
+.sidenav a:hover {
+    color:silver;
+}
+
+.employeeId{
+    
+    margin-bottom: 10%;
+    margin-top: 10%;
+  
+}
+
+body{
+color: black;
+background-color: gold;
+}
+
+#visiblePage{
+    margin-left: 20%;
+}
+
+.container{
+    font-family: 'Kaushan Script', cursive;
+}
+
+.updateInput{
+    float: right;
+    display: inline-flex;
+    position: relative;
+    bottom: 22px;
+    margin-left: 20px;
+    font-family: 'Playfair Display SC', serif;
+    
+}
+
+.showTextbox{
+    display:none;
+}
+p {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    margin-left: 40%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 65%;
+    margin-left: 0;
+}
+
+#remove{
+    float: right;
+    display: inline-flex;
+    position: relative;
+    bottom: 22px;
+    margin-left: 20px;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.hideRemove{
+    display: none;
+}
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
