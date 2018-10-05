@@ -51,10 +51,15 @@ const update = function () {
         let checker = false;
         for (let i = 0; i < employeeList.length; i++) {
             if (employeeName == employeeList[i].name) {
-                employeeList[i].officeNum = document.getElementById("updateRoom").value;
-                employeeList[i].phoneNum = document.getElementById("updateNum").value;
-                checker = true;
+                if (document.getElementById("updateRoom").value != '')  {
+                    employeeList[i].officeNum = document.getElementById("updateRoom").value;
+                }
 
+                if (document.getElementById("updateNum").value != '') {
+                    employeeList[i].phoneNum = document.getElementById("updateNum").value;
+
+                }
+                checker = true;
             }
 
         }
@@ -81,8 +86,8 @@ const remove = function () {
         let employeeName = document.getElementById("removeName").value;
         for (let i = 0; i < employeeList.length; i++) {
             if (employeeName == employeeList[i].name) {
-               
-                employeeList.splice(i,1);
+
+                employeeList.splice(i, 1);
 
             }
         }
